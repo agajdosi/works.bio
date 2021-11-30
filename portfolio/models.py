@@ -4,6 +4,7 @@ from django.db import models
 
 class Artwork(models.Model):
   title = models.CharField(max_length=100)
-  created = models.DateTimeField('created')
+  created = models.DateField('created')
   about = models.CharField(max_length=800)
-  my_file = models.FileField(storage=select_storage)
+  previewFile = models.FileField()
+
